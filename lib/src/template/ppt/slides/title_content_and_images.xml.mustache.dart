@@ -17,7 +17,7 @@ const template = r'''
         </a:xfrm>
       </p:grpSpPr>
 
-      <!-- Title -->
+      <!-- Title: full width at the top -->
       <p:sp>
         <p:nvSpPr>
           <p:cNvPr id="2" name="Title"/>
@@ -30,20 +30,23 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="600000" y="200000"/>
-            <a:ext cx="22000000" cy="1800000"/>
+            <a:off x="0" y="0"/>
+            <a:ext cx="24384000" cy="1800000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
           <a:bodyPr/>
           <a:lstStyle/>
+          <a:defPPr>
+            <a:defRPr sz="4400"/>
+          </a:defPPr>
           {{#title}}
           {{>text-value}}
           {{/title}}
         </p:txBody>
       </p:sp>
 
-      <!-- Content -->
+      <!-- Content: left half, large font -->
       <p:sp>
         <p:nvSpPr>
           <p:cNvPr id="3" name="Content"/>
@@ -56,20 +59,23 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="600000" y="2100000"/>
-            <a:ext cx="9000000" cy="9000000"/>
+            <a:off x="0" y="2000000"/>
+            <a:ext cx="12000000" cy="11716000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
           <a:bodyPr/>
           <a:lstStyle/>
+          <a:defPPr>
+            <a:defRPr sz="3200"/>
+          </a:defPPr>
           {{#content}}
           {{>text-value}}
           {{/content}}
         </p:txBody>
       </p:sp>
 
-      <!-- First Image -->
+      <!-- First Image: right half, top -->
       <p:pic>
         <p:nvPicPr>
           <p:cNvPr id="4" name="Image 1"/>
@@ -88,8 +94,8 @@ const template = r'''
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="10500000" y="2100000"/>
-            <a:ext cx="6500000" cy="5000000"/>
+            <a:off x="12500000" y="2000000"/>
+            <a:ext cx="11500000" cy="4800000"/>
           </a:xfrm>
           <a:prstGeom prst="rect">
             <a:avLst/>
@@ -108,20 +114,23 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="10500000" y="7200000"/>
-            <a:ext cx="6500000" cy="1000000"/>
+            <a:off x="12500000" y="6900000"/>
+            <a:ext cx="11500000" cy="1000000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
           <a:bodyPr/>
           <a:lstStyle/>
+          <a:defPPr>
+            <a:defRPr sz="2200"/>
+          </a:defPPr>
           {{#caption1}}
           {{>text-value}}
           {{/caption1}}
         </p:txBody>
       </p:sp>
 
-      <!-- Second Image -->
+      <!-- Second Image: right half, bottom -->
       <p:pic>
         <p:nvPicPr>
           <p:cNvPr id="6" name="Image 2"/>
@@ -140,8 +149,8 @@ const template = r'''
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="17500000" y="2100000"/>
-            <a:ext cx="6500000" cy="5000000"/>
+            <a:off x="12500000" y="8000000"/>
+            <a:ext cx="11500000" cy="4800000"/>
           </a:xfrm>
           <a:prstGeom prst="rect">
             <a:avLst/>
@@ -160,13 +169,16 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="17500000" y="7200000"/>
-            <a:ext cx="6500000" cy="1000000"/>
+            <a:off x="12500000" y="12900000"/>
+            <a:ext cx="11500000" cy="800000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
           <a:bodyPr/>
           <a:lstStyle/>
+          <a:defPPr>
+            <a:defRPr sz="2200"/>
+          </a:defPPr>
           {{#caption2}}
           {{>text-value}}
           {{/caption2}}
