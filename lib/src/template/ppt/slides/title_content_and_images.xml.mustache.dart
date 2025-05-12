@@ -35,7 +35,7 @@ const template = r'''
           </a:xfrm>
         </p:spPr>
         <p:txBody>
-          <a:bodyPr/>
+          <a:bodyPr wrap="square"/>
           <a:lstStyle/>
           <a:defPPr>
             <a:defRPr sz="4400"/>
