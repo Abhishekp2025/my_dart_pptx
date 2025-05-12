@@ -1,3 +1,5 @@
+import 'package:dart_pptx/dart_pptx.dart';
+
 const template = r'''
 <p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
   <p:cSld name="{{name}}">
