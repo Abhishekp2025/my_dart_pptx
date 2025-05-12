@@ -30,8 +30,8 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="838200" y="365125"/>
-            <a:ext cx="8238500" cy="1333500"/>
+            <a:off x="600000" y="200000"/>
+            <a:ext cx="22000000" cy="1800000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
@@ -56,8 +56,8 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="838200" y="1698625"/>
-            <a:ext cx="3651250" cy="3651250"/>
+            <a:off x="600000" y="2100000"/>
+            <a:ext cx="9000000" cy="9000000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
@@ -88,8 +88,8 @@ const template = r'''
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="4489450" y="1698625"/>
-            <a:ext cx="3651250" cy="1825625"/>
+            <a:off x="10500000" y="2100000"/>
+            <a:ext cx="6500000" cy="5000000"/>
           </a:xfrm>
           <a:prstGeom prst="rect">
             <a:avLst/>
@@ -108,8 +108,8 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="4489450" y="3524250"/>
-            <a:ext cx="3651250" cy="1825625"/>
+            <a:off x="10500000" y="7200000"/>
+            <a:ext cx="6500000" cy="1000000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
@@ -140,8 +140,8 @@ const template = r'''
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="4489450" y="5349875"/>
-            <a:ext cx="3651250" cy="1825625"/>
+            <a:off x="17500000" y="2100000"/>
+            <a:ext cx="6500000" cy="5000000"/>
           </a:xfrm>
           <a:prstGeom prst="rect">
             <a:avLst/>
@@ -160,8 +160,8 @@ const template = r'''
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="4489450" y="7175500"/>
-            <a:ext cx="3651250" cy="1825625"/>
+            <a:off x="17500000" y="7200000"/>
+            <a:ext cx="6500000" cy="1000000"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
