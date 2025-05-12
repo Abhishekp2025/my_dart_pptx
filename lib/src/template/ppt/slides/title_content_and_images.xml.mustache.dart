@@ -192,3 +192,40 @@ const template = r'''
   </p:clrMapOvr>
 </p:sld>
 ''';
+
+List<String> splitContent(String content, {int maxLength = 600}) {
+  // Split at nearest line break or space before maxLength
+  List<String> chunks = [];
+  while (content.length > maxLength) {
+    int splitAt = content.lastIndexOf('\n', maxLength);
+    if (splitAt == -1) splitAt = content.lastIndexOf(' ', maxLength);
+    if (splitAt == -1) splitAt = maxLength;
+    chunks.add(content.substring(0, splitAt).trim());
+    content = content.substring(splitAt).trim();
+  }
+  if (content.isNotEmpty) chunks.add(content);
+  return chunks;
+}
+
+Future<void> addTitleContentAndImagesSlidesWithOverflow({
+  required PowerPoint presentation,
+  required String title,
+  required String content,
+  required ImageReference image1,
+  required ImageReference image2,
+  required String caption1,
+  required String caption2,
+  int maxLength = 600,
+}) async {
+  final contentChunks = splitContent(content, maxLength: maxLength);
+  for (var i = 0; i < contentChunks.length; i++) {
+    await presentation.addTitleContentAndImagesSlide(
+      title: TextValue.uniform(title),
+      content: TextValue.uniform(contentChunks[i]),
+      image1: image1,
+      image2: image2,
+      caption1: TextValue.uniform(caption1),
+      caption2: TextValue.uniform(caption2),
+    );
+  }
+}
