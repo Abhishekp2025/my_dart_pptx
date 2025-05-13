@@ -342,3 +342,61 @@ pres.company = 'Company';
 pres.revision = 'Revision';
 ```
 # my_dart_pptx
+
+
+
+
+
+
+
+## add custom slides
+ Create the XML Mustache Template
+Where:
+lib/src/template/ppt/slides/
+What:
+Create a new file, e.g. my_custom_layout.xml.mustache.dart
+How:
+Copy an existing template as a starting point (e.g., title_content_and_images.xml.mustache.dart).
+Edit the XML to define your new layout (shapes, text boxes, images, etc.).
+Export the template as a Dart string constant.
+2. Create the Slide Dart Class
+Where:
+lib/src/slides/
+What:
+Create a new file, e.g. my_custom_layout.dart
+How:
+Define a class (e.g., SlideMyCustomLayout) that extends Slide.
+Add fields for all the data your layout needs (title, content, images, etc.).
+Set the source getter to your new template.
+Implement toJson, imageRefs, etc. as needed.
+Example:
+Apply to slides.dart
+}
+3. Register the Slide in Your Slide Templates Extension
+Where:
+lib/src/slides.dart
+What:
+Add a function to the SlideTemplates extension for your new layout.
+Example:
+Apply to slides.dart
+;
+4. (Optional) Add to Exports
+Where:
+lib/src/slides.dart
+What:
+Add an export for your new slide file:
+Apply to slides.dart
+;
+5. Use Your New Layout
+Now you can use presentation.addMyCustomLayoutSlide(...) in your code!
+Summary Table
+| Step | File/Folder | Example Filename |
+|------|-------------|-----------------|
+| 1 | lib/src/template/ppt/slides/ | my_custom_layout.xml.mustache.dart |
+| 2 | lib/src/slides/ | my_custom_layout.dart |
+| 3 | lib/src/slides.dart | (add function in extension) |
+| 4 | lib/src/slides.dart | (add export) |
+Tip:
+Use clear, descriptive names for your layout and fields.
+You can look at existing layouts (like title_content_and_images) for reference.
+If you want a concrete example for a specific layout idea, just let me know!

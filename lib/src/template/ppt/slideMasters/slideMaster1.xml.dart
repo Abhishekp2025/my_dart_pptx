@@ -178,6 +178,28 @@ const String template = r'''<?xml version="1.0" encoding="UTF-8"?>
                     </a:p>
                 </p:txBody>
             </p:sp>
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="100" name="Trademark"/>
+                    <p:cNvPicPr/>
+                    <p:nvPr/>
+                </p:nvPicPr>
+                <p:blipFill>
+                    <a:blip r:embed="rId99"/>
+                    <a:stretch>
+                        <a:fillRect/>
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr>
+                    <a:xfrm>
+                        <a:off x="23000000" y="12000000"/>
+                        <a:ext cx="400000" cy="400000"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="ellipse">
+                        <a:avLst/>
+                    </a:prstGeom>
+                </p:spPr>
+            </p:pic>
         </p:spTree>
     </p:cSld>
     <p:clrMap bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/>

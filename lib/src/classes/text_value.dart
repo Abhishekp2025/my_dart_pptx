@@ -93,7 +93,7 @@ final singleLineTemplate = Template(
 const _multiLine = r'''
 {{#lines}}
 <a:p>
-  <a:pPr/>
+  <a:pPr algn="l"/>
   {{>text-line}}
 </a:p>
 {{/lines}}
