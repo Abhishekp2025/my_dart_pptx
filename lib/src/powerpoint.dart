@@ -62,6 +62,7 @@ class PowerPoint {
     required ImageReference image2,
     TextValue? caption1,
     TextValue? caption2,
+    bool? contentRight,
   }) async {
     final slide = SlideTitleContentAndImages(
       title: title,
@@ -70,6 +71,7 @@ class PowerPoint {
       image2: image2,
       caption1: caption1,
       caption2: caption2,
+      contentRight: contentRight,
     );
     addSlide(slide);
   }

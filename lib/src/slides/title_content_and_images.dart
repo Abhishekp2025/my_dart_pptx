@@ -3,7 +3,10 @@ import 'package:json_annotation/json_annotation.dart';
 import '../classes/images.dart';
 import '../classes/slide.dart';
 import '../classes/text_value.dart';
-import '../template/ppt/slides/title_content_and_images.xml.mustache.dart';
+import '../template/ppt/slides/title_content_and_images.xml.mustache.dart'
+    as template;
+import '../template/ppt/slides/title_content_right_and_images.xml.mustache.dart'
+    as template2;
 
 part 'title_content_and_images.g.dart';
 
@@ -19,6 +22,7 @@ class SlideTitleContentAndImages extends Slide {
     this.caption2,
     super.speakerNotes,
     super.slideNumber,
+    this.contentRight = false,
   });
 
   TextValue? title;
@@ -27,6 +31,7 @@ class SlideTitleContentAndImages extends Slide {
   ImageReference? image2;
   TextValue? caption1;
   TextValue? caption2;
+  bool? contentRight;
 
   @override
   int get layoutId => 4; // You'll need to create a custom layout in PowerPoint
@@ -42,5 +47,6 @@ class SlideTitleContentAndImages extends Slide {
   Map<String, dynamic> toJson() => _$SlideTitleContentAndImagesToJson(this);
 
   @override
-  String get source => template;
+  String get source =>
+      contentRight == true ? template2.template : template.template;
 }
