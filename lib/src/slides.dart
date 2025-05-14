@@ -198,6 +198,7 @@ extension SlideTemplates on PowerPoint {
                 .join('')
                 .length >
             100) {
+      print('Caption 1 cant be longer then 100 chars: ${caption1.toString()}');
       throw Exception('Caption 1 cant be longer then 100 chars');
     }
 
@@ -207,6 +208,7 @@ extension SlideTemplates on PowerPoint {
                 .join('')
                 .length >
             100) {
+      print('Caption 2 cant be longer then 100 chars: ${caption2.toString()}');
       throw Exception('Caption 2 cant be longer then 100 chars');
     }
 
@@ -233,6 +235,7 @@ extension SlideTemplates on PowerPoint {
                 .join('')
                 .length >
             100) {
+      print('Caption cant be longer then 100 chars: ${caption.toString()}');
       throw Exception('Caption cant be longer then 100 chars');
     }
     return addSlide(SlideTitleContentOneImageCaption(
@@ -258,6 +261,7 @@ extension SlideTemplates on PowerPoint {
                 .join('')
                 .length >
             100) {
+      print('Caption 1 cant be longer then 100 chars: ${caption1.toString()}');
       throw Exception('Caption 1 cant be longer then 100 chars');
     }
 
@@ -267,6 +271,7 @@ extension SlideTemplates on PowerPoint {
                 .join('')
                 .length >
             100) {
+      print('Caption 2 cant be longer then 100 chars: ${caption2.toString()}');
       throw Exception('Caption 2 cant be longer then 100 chars');
     }
 

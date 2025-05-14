@@ -21,6 +21,9 @@ class TextItem {
   });
 
   Map<String, dynamic> toJson() => _$TextItemToJson(this);
+
+  @override
+  String toString() => value;
 }
 
 @JsonSerializable(createFactory: false)
@@ -32,6 +35,9 @@ class TextValueLine {
   });
 
   Map<String, dynamic> toJson() => _$TextValueLineToJson(this);
+
+  @override
+  String toString() => values.map((e) => e.toString()).join('');
 }
 
 @JsonSerializable(createFactory: false)
@@ -78,6 +84,9 @@ class TextValue {
   }
 
   Map<String, dynamic> toJson() => _$TextValueToJson(this);
+
+  @override
+  String toString() => lines.map((e) => e.toString()).join('\n');
 }
 
 final multiLineTemplate = Template(
