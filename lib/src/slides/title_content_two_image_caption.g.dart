@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'title_content_and_images.dart';
+part of 'title_content_two_image_caption.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$SlideTitleContentAndImagesToJson(
-        SlideTitleContentAndImages instance) =>
+Map<String, dynamic> _$SlideTitleContentTwoImageCaptionToJson(
+        SlideTitleContentTwoImageCaption instance) =>
     <String, dynamic>{
       'index': instance.index,
       'isLast': instance.isLast,
@@ -27,7 +27,7 @@ Map<String, dynamic> _$SlideTitleContentAndImagesToJson(
       'image2': instance.image2?.toJson(),
       'caption1': instance.caption1?.toJson(),
       'caption2': instance.caption2?.toJson(),
-      'contentRight': instance.contentRight,
+      'contentDown': instance.contentDown,
       'layoutId': instance.layoutId,
       'source': instance.source,
     };

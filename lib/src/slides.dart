@@ -1,4 +1,8 @@
-import 'package:dart_pptx/dart_pptx.dart' show SlideTitleContentAndImages;
+import 'package:dart_pptx/dart_pptx.dart'
+    show
+        SlideTitleContentAndImages,
+        SlideTitleContentOneImageCaption,
+        SlideTitleContentTwoImageCaption;
 
 import 'classes.dart';
 import 'powerpoint.dart';
@@ -35,6 +39,8 @@ export 'slides/title_bullets_and_photo.dart';
 export 'slides/title_only.dart';
 export 'slides/title.dart';
 export 'slides/title_content_and_images.dart';
+export 'slides/title_content_image_caption.dart';
+export 'slides/title_content_two_image_caption.dart';
 
 extension SlideTemplates on PowerPoint {
   Slide addTitleSlide({
@@ -193,5 +199,38 @@ extension SlideTemplates on PowerPoint {
         image2: image2,
         caption1: caption1,
         caption2: caption2,
+      ));
+
+  Slide addTitleContentAndOneImageSlide({
+    TextValue? title,
+    TextValue? content,
+    ImageReference? image,
+    TextValue? caption,
+    bool? contentRight,
+  }) =>
+      addSlide(SlideTitleContentOneImageCaption(
+          title: title,
+          content: content,
+          image: image,
+          caption: caption,
+          contentRight: contentRight));
+
+  Slide addTitleContentTwoImageCaptionSlide({
+    TextValue? title,
+    TextValue? content,
+    ImageReference? image1,
+    ImageReference? image2,
+    TextValue? caption1,
+    TextValue? caption2,
+    bool? contentDown,
+  }) =>
+      addSlide(SlideTitleContentTwoImageCaption(
+        title: title,
+        content: content,
+        image1: image1,
+        image2: image2,
+        caption1: caption1,
+        caption2: caption2,
+        contentDown: contentDown,
       ));
 }
