@@ -191,15 +191,34 @@ extension SlideTemplates on PowerPoint {
     ImageReference? image2,
     TextValue? caption1,
     TextValue? caption2,
-  }) =>
-      addSlide(SlideTitleContentAndImages(
-        title: title,
-        content: content,
-        image1: image1,
-        image2: image2,
-        caption1: caption1,
-        caption2: caption2,
-      ));
+  }) {
+    if (caption1 != null &&
+        caption1.lines
+                .map((e) => e.values.map(((e) => e.value)).join(' '))
+                .join('')
+                .length >
+            100) {
+      throw Exception('Caption 1 cant be longer then 100 chars');
+    }
+
+    if (caption2 != null &&
+        caption2.lines
+                .map((e) => e.values.map(((e) => e.value)).join(' '))
+                .join('')
+                .length >
+            100) {
+      throw Exception('Caption 2 cant be longer then 100 chars');
+    }
+
+    return addSlide(SlideTitleContentAndImages(
+      title: title,
+      content: content,
+      image1: image1,
+      image2: image2,
+      caption1: caption1,
+      caption2: caption2,
+    ));
+  }
 
   Slide addTitleContentAndOneImageSlide({
     TextValue? title,
@@ -207,13 +226,22 @@ extension SlideTemplates on PowerPoint {
     ImageReference? image,
     TextValue? caption,
     bool? contentRight,
-  }) =>
-      addSlide(SlideTitleContentOneImageCaption(
-          title: title,
-          content: content,
-          image: image,
-          caption: caption,
-          contentRight: contentRight));
+  }) {
+    if (caption != null &&
+        caption.lines
+                .map((e) => e.values.map(((e) => e.value)).join(' '))
+                .join('')
+                .length >
+            100) {
+      throw Exception('Caption cant be longer then 100 chars');
+    }
+    return addSlide(SlideTitleContentOneImageCaption(
+        title: title,
+        content: content,
+        image: image,
+        caption: caption,
+        contentRight: contentRight));
+  }
 
   Slide addTitleContentTwoImageCaptionSlide({
     TextValue? title,
@@ -223,14 +251,33 @@ extension SlideTemplates on PowerPoint {
     TextValue? caption1,
     TextValue? caption2,
     bool? contentDown,
-  }) =>
-      addSlide(SlideTitleContentTwoImageCaption(
-        title: title,
-        content: content,
-        image1: image1,
-        image2: image2,
-        caption1: caption1,
-        caption2: caption2,
-        contentDown: contentDown,
-      ));
+  }) {
+    if (caption1 != null &&
+        caption1.lines
+                .map((e) => e.values.map(((e) => e.value)).join(' '))
+                .join('')
+                .length >
+            100) {
+      throw Exception('Caption 1 cant be longer then 100 chars');
+    }
+
+    if (caption2 != null &&
+        caption2.lines
+                .map((e) => e.values.map(((e) => e.value)).join(' '))
+                .join('')
+                .length >
+            100) {
+      throw Exception('Caption 2 cant be longer then 100 chars');
+    }
+
+    return addSlide(SlideTitleContentTwoImageCaption(
+      title: title,
+      content: content,
+      image1: image1,
+      image2: image2,
+      caption1: caption1,
+      caption2: caption2,
+      contentDown: contentDown,
+    ));
+  }
 }
