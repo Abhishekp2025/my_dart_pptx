@@ -348,47 +348,45 @@ pres.revision = 'Revision';
 
 
 
+### 🛠️ How to Add a Custom Slide Layout
 
-## add custom slides
- Create the XML Mustache Template
-Where:
-lib/src/template/ppt/slides/
-What:
-Create a new file, e.g. my_custom_layout.xml.mustache.dart
-How:
-Copy an existing template as a starting point (e.g., title_content_and_images.xml.mustache.dart).
-Edit the XML to define your new layout (shapes, text boxes, images, etc.).
-Export the template as a Dart string constant.
-2. Create the Slide Dart Class
-Where:
-lib/src/slides/
-What:
-Create a new file, e.g. my_custom_layout.dart
-How:
-Define a class (e.g., SlideMyCustomLayout) that extends Slide.
-Add fields for all the data your layout needs (title, content, images, etc.).
-Set the source getter to your new template.
-Implement toJson, imageRefs, etc. as needed.
-Example:
-Apply to slides.dart
-}
-3. Register the Slide in Your Slide Templates Extension
-Where:
-lib/src/slides.dart
-What:
-Add a function to the SlideTemplates extension for your new layout.
-Example:
-Apply to slides.dart
-;
-4. (Optional) Add to Exports
-Where:
-lib/src/slides.dart
-What:
-Add an export for your new slide file:
-Apply to slides.dart
-;
-5. Use Your New Layout
-Now you can use presentation.addMyCustomLayoutSlide(...) in your code!
+- **1. Create the XML Mustache Template**  
+  📁 Location: `lib/src/template/ppt/slides/`  
+  🔧 Steps:  
+  - Create a new file, e.g. `my_custom_layout.xml.mustache.dart`.  
+  - Copy an existing template (e.g., `title_content_and_images.xml.mustache.dart`) as a base.  
+  - Edit the XML to define your new layout (e.g., shapes, text boxes, images).  
+  - Export the template as a Dart string constant.
+
+- **2. Create the Slide Dart Class**  
+  📁 Location: `lib/src/slides/`  
+  🔧 Steps:  
+  - Create a new file, e.g. `my_custom_layout.dart`.  
+  - Define a class (e.g., `SlideMyCustomLayout`) that extends `Slide`.  
+  - Add fields for all the data the layout needs (e.g., title, content, images).  
+  - Override the `source` getter to return your new template.  
+  - Implement `toJson()`, `imageRefs()`, etc. as needed.
+
+- **3. Register the Slide in SlideTemplates Extension**  
+  📁 Location: `lib/src/slides.dart`  
+  🔧 Steps:  
+  - Add a method to the `SlideTemplates` extension (e.g., `addMyCustomLayoutSlide(...)`).  
+  - Use your new class inside this function.
+
+- **4. (Optional) Export the Slide File**  
+  📁 Location: `lib/src/slides.dart`  
+  🔧 Steps:  
+  - Add an export line for your new slide file:  
+    ```dart
+    export 'slides/my_custom_layout.dart';
+    ```
+
+- **5. Use Your New Slide Layout**  
+  ✅ You can now use your layout like so:  
+  ```dart
+  presentation.addMyCustomLayoutSlide(...);
+  ```
+
 Summary Table
 | Step | File/Folder | Example Filename |
 |------|-------------|-----------------|
