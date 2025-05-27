@@ -366,6 +366,7 @@ pres.revision = 'Revision';
   - Add fields for all the data the layout needs (e.g., title, content, images).  
   - Override the `source` getter to return your new template.  
   - Implement `toJson()`, `imageRefs()`, etc. as needed.
+  - user build runner command to generate required file `.g.dart`
 
 - **3. Register the Slide in SlideTemplates Extension**  
   📁 Location: `lib/src/slides.dart`  
