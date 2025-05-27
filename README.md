@@ -399,4 +399,3 @@ Summary Table
 Tip:
 Use clear, descriptive names for your layout and fields.
 You can look at existing layouts (like title_content_and_images) for reference.
-If you want a concrete example for a specific layout idea, just let me know!
