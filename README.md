@@ -396,6 +396,9 @@ Summary Table
 | 2 | lib/src/slides/ | my_custom_layout.dart |
 | 3 | lib/src/slides.dart | (add function in extension) |
 | 4 | lib/src/slides.dart | (add export) |
+
+
+
 Tip:
 Use clear, descriptive names for your layout and fields.
 You can look at existing layouts (like title_content_and_images) for reference.
